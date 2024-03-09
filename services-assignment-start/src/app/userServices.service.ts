@@ -18,5 +18,6 @@ export class UserServicesService {
         this.inactiveUsers.push(this.activeUsers[id]);
         this.activeUsers.splice(id, 1);
         this.counterService.incrementActiveToInactive();
+        
     }
 }
