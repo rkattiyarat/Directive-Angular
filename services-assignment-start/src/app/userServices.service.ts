@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { CounterServiceService } from "./counterService.service";
 
+//inject the CounterServiceService into the UserServicesService
 @Injectable()
 export class UserServicesService {
     activeUsers = ['Max', 'Anna'];
@@ -18,6 +19,6 @@ export class UserServicesService {
         this.inactiveUsers.push(this.activeUsers[id]);
         this.activeUsers.splice(id, 1);
         this.counterService.incrementActiveToInactive();
-        
+
     }
 }
